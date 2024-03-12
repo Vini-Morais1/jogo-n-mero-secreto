@@ -4,6 +4,9 @@
     --font-family: "Inter", sans-serif;
     --bg-color: #265073;
     --primary-color: #F1FADA;
+    --bg-game-over-color: #820300;
+    --primary-game-over-color: #D37676;
+    --btn-game-over-color: #22092C;
 }
 
 body {
@@ -17,6 +20,11 @@ body {
     text-align: center;
     margin: 0;
     font-family: var(--font-family);
+}
+
+.game-over {
+    background-color: var(--bg-game-over-color);
+    color: var(--primary-game-over-color);
 }
 
 h1 {
@@ -55,3 +63,7 @@ h3 {
     margin-top: 20px;
 }
 
+.btn-game-over {
+    background-color: var(--primary-game-over-color);
+    color: var(--btn-game-over-color);
+}
