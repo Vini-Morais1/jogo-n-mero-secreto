@@ -47,7 +47,7 @@ function numeroForMaiorOuMenorQueOValorPermitido(numero) {
 }
 
 function chuteForGameOver(chute) {
-    return chute.toLowerCase() === 'game over';
+    return chute.toLowerCase() === 'game over' || chute.toLowerCase() === 'game over.'
 }
 
 document.body.addEventListener('click', e => {
