@@ -1,13 +1,5 @@
 function verificaSeOChutePossuiUmValorValido(chute) {
     const numero = + chute;
-    
-    if (chuteForGameOver(chute)) {
-        document.body.innerHTML = `
-            <h1>GAME OVER</h1>
-            <button id="jogar-novamente" class="btn-jogar btn-game-over">Jogar novamente</button>
-        `;
-        document.body.classList.add('game-over');
-    }
 
     if (chuteForInvalido(numero)) {
         elementoChute.innerHTML += `<div>Valor inválido</div>`;
@@ -18,7 +10,6 @@ function verificaSeOChutePossuiUmValorValido(chute) {
         elementoChute.innerHTML += `<div>Valor inválido: Fale um número entre  ${menorValor} e ${maiorValor}</div>`;
         return;
     }
-
 
     if (numero === numeroSecreto) {
         document.body.innerHTML = `
@@ -34,6 +25,16 @@ function verificaSeOChutePossuiUmValorValido(chute) {
         elementoChute.innerHTML += `
             <div>O número secreto é maior <i class="fa-solid fa-arrow-up-long"></i></div>
         `;
+    }
+}
+
+function verificaSeFalouGameOver(palavra) {
+    if (chuteForGameOver(palavra)) {
+        document.body.innerHTML = `
+            <h1>GAME OVER</h1>
+            <button id="jogar-novamente" class="btn-jogar btn-game-over">Jogar novamente</button>
+        `;
+        document.body.classList.add('game-over');
     }
 }
 
