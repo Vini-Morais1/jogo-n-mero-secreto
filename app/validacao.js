@@ -47,11 +47,11 @@ function numeroForMaiorOuMenorQueOValorPermitido(numero) {
 }
 
 function chuteForGameOver(chute) {
-    return chute == 'game over';
+    return chute.toLowerCase() === 'game over';
 }
 
 document.body.addEventListener('click', e => {
-    if (e.target.id == 'jogar-novamente') {
+    if (e.target.id === 'jogar-novamente') {
         window.location.reload();
     }
 })
